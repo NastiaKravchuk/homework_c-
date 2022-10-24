@@ -1,20 +1,20 @@
-﻿int [] creatArray(int size, int maxValue, int minValue)
+﻿double [] creatArray(int size, double maxValue, double minValue)
 
     {
-        int [] array = new int[size];
+        double [] array = new double[size];
 
         Random random = new Random();
 
         for (int i =0; i<array.Length; i++)
         {
-            array[i]=random.Next(maxValue, minValue);
+            array[i]=random.NextDouble();
         }
         return array;
     }
 
-    int GetMax (int[] array)
+    double GetMax (double[] array)
     {
-        int max=array[0];
+        double max=array[0];
         for (int i =0; i<array.Length; i++)
         if (array[i]>max)
         {
@@ -24,9 +24,9 @@
 
     }
 
-int GetMin (int[] array)
+double GetMin (double[] array)
     {
-        int min=array[0];
+        double min=array[0];
         
         for (int i =0; i<array.Length; i++)
         if (array[i]<min)
@@ -36,10 +36,11 @@ int GetMin (int[] array)
         return min;
 
     }
-string GetArray(int[] array)
+string GetArray(double[] array)
     {
     string sum = string.Empty;
-    for (int i =0; i<array.Length; i++)
+    for (int
+     i =0; i<array.Length; i++)
 
     {
         sum=sum + $"{array[i]}, "; 
@@ -48,7 +49,7 @@ string GetArray(int[] array)
     return sum;
     }
 
-    int[] array = creatArray(10,1,74);
+    double[] array = creatArray(10,1,74);
 
 Console.WriteLine("Массив " + GetArray(array));
 Console.WriteLine("Максимальное значение " + GetMax(array));
